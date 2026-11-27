@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FridayFinds — Black Friday Deal Finder</title>
+<meta name="description" content="Real Black Friday and Cyber Monday deals, each checked by hand at its store on 27 November 2026, with an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#/">
+      <span class="brand-mark" aria-hidden="true">FF</span>
+      <span class="brand-name">FridayFinds</span>
+    </a>
+    <p class="tagline">Real Black Friday deals, checked by hand — not scraped, not guessed.</p>
+  </div>
+</header>
+
+<section class="controls wrap" aria-label="Find deals">
+  <div class="search-row">
+    <label class="search-box">
+      <span class="visually-hidden">Search deals</span>
+      <input id="q" type="search" placeholder="Search a product, brand or store…" autocomplete="off">
+    </label>
+    <label class="select-wrap">Sort
+      <select id="sort">
+        <option value="discount">Biggest discount</option>
+        <option value="savings">Most money saved</option>
+        <option value="price-asc">Price: low to high</option>
+        <option value="price-desc">Price: high to low</option>
+        <option value="verdict">Best verdict first</option>
+      </select>
+    </label>
+  </div>
+  <div class="filter-row">
+    <label class="select-wrap">Category
+      <select id="category"><option value="">All categories</option></select>
+    </label>
+    <label class="select-wrap">Store
+      <select id="store"><option value="">All stores</option></select>
+    </label>
+    <label class="select-wrap">Discount
+      <select id="minoff">
+        <option value="0">Any discount</option>
+        <option value="25">25% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+        <option value="60">60% off or more</option>
+      </select>
+    </label>
+    <label class="check-wrap"><input id="only-real" type="checkbox"> Only real deals (new low or strong)</label>
+    <button id="clear" type="button">Clear filters</button>
+  </div>
+  <p id="stats" class="stats" aria-live="polite"></p>
+</section>
+
+<main id="app" class="wrap"></main>
+
+<footer class="wrap foot">
+  <h2>How these deals were checked</h2>
+  <p>Every deal on this page was found and checked by a person on <strong>Friday 27 November 2026</strong>. Each card shows the sale price, the usual price, the discount, the store, a link to the product at that store, the exact time the price was checked (UTC), and the page where the price was read. A verdict on each deal says whether it is really a bargain: <strong>New low</strong> means the lowest price the evidence supports, <strong>Strong</strong> means a genuinely good price, <strong>Routine</strong> means a normal sale price, and <strong>Inflated</strong> means the “usual” price looks padded. Prices change fast on Black Friday — always confirm the price at the store before you buy.</p>
+  <p class="foot-note">FridayFinds is an independent deal guide. Prices in US dollars. Store names and product names belong to their owners; links go straight to the store.</p>
+</footer>
+</body>
+</html>
